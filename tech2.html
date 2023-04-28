@@ -1,0 +1,146 @@
+<!Doctype html>
+<html lang=en >
+<head>
+<meta charset="UTF-8" >
+<meta name="ANSH MESHRAM" context="portfolio">
+<link rel=""icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgqQe8JhxoXjy2_lve779pbB0AlaR-rm4bHA&usqp=CAU" type="image/x-icon">
+
+<title> Doogle </title>
+<style>
+.l {
+	margin:auto;
+	position:absolute;
+	top:22vh;
+	left:30vw;
+}
+main {
+	width:100%;
+	position:absolute;
+	top:2vh;
+	left:0vw;
+
+}
+Input [type="text"] {
+	width:500px;
+}
+.box {
+	width:550px;
+	height:2rem;
+	position:relative;
+	top:52vh;
+	left:33vw;
+	background:#dbdcde;
+}
+.gmail {
+	position: absolute;
+	top:3vh;
+	right:5vw;
+}
+.img {
+	position:absolute;
+	top:3vh;
+	right:2vh;
+}
+.gog {
+	background:#dbdcde;
+	border:1px solid #000;
+	padding=0;
+	position:absolute;
+	top:59vh;
+	left:38vw;
+}
+.luck {
+	background:#dbdcde;
+	border:1px solid #000;
+	padding:0px;
+	position:absolute;
+	top:59vh;
+	right:37vw;
+
+}
+
+
+.ind {
+	width:100vw;
+	background:#dbdcde;
+	padding:0px;
+	position:absolute;
+	top:83.2vh;
+	left:0px;
+	}
+.final {
+	width:100vw;
+	background:#dbdcde;
+	padding:0px;
+	height:70px;
+	position:absolute;
+	top:86vh;
+	left:0px;
+	word-spacing:30px;
+}
+
+
+</style>
+</head>
+<body>
+
+<script> 
+const jssearch = () => {
+const data="Google-https://www.google.com YouTube-https://www.youtube.com Facebook-https://www.facebook.com Baidu-https://www.baidu.com Wikipedia-https://www.wikipedia.org QQ.com-https://www.qq.com Taobao-https://www.taobao.com Amazon-https://www.amazon.com Tmall-https://www.tmall.com Twitter-https://www.twitter.com "
+var count=0;
+for (i in data) {
+	if (data[i]==' ') ++count;
+}
+var a=[];
+var op="";
+var up="";
+var d=0;
+var i=0;
+	for ( g in data) {
+	if (data[g]=='/' && data[g+1]=='r') {++g; continue;}
+	if (data[g]=='-') {d=1; continue;}
+	if (data[g]==' ') { d=0; a[i]=[up,op]; up=""; op=""; ++i; continue;}
+	if(d==0) up+=data[g];
+	if (d==1) op+=data[g];
+	}
+var address="_blank";
+var search;
+search=document.getElementById("search").value.toUpperCase();
+console.log(search);
+var i=0;
+for (i;i<count;++i) {
+	if ((a[i][0].toUpperCase())==search) { address=a[i][1]; break;}
+}
+var _window = this || self || window;
+_window.open(a[i][1],"_self");
+}
+</script>
+<div class="gmail"> GMail </div>
+<div class="img"> Images </div>
+<section id="logo">
+<div class="l">
+<img src="https://cdn.freebiesupply.com/images/large/2x/google-logo-black-transparent.png" alt="Doogle" title="Search logo" width="600px" >
+<br>
+</div>
+<main class="f">
+<div class="box">
+<input type=search id="search" autofocus required placeholder="Search doogle or any URL" style= "width:500px">
+<button type="submit" onclick="jssearch()"><img src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/search-512.png" width="20px" ></button>
+</div>
+<div class="gog">
+<a href="www.google.com"><h2> Google Search</h2></a>
+
+</h2>
+</div>
+
+<div class="luck">
+<a href="www.google.com"><h2> I'm Feeling Lucky </h2></a>
+</div>
+
+<div class="ind"> India </div>
+<div class="final"> About Advertising				Business			How-Search-works </div>
+
+</main>
+</section>
+</body>
+</html>
